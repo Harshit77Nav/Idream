@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.heading{
+    font-size: 40px; 
+    text-shadow: 2px 5px 5px red;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    top: 15px;
+}
+.logotext{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+.searchbox{
+    width: 20vw;
+    margin-right: 20px;
+    background: rgba(0, 0, 0, 0.603);
+    font-size: 15px;
+    color: white;
+}
+.searchbtn{
+    width: 150px;
+    height: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.addbtn{
+    width: 150px;
+    height: 25px;
+    position: relative;
+    top: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(54, 255, 47);
+    cursor: pointer;
+}
+.gridbox{
+    width: 80vw;
+    margin: auto;
+    columns: 3 250px;
+    gap: 20px;
+}
+.imgBox{
+    width: 100%;
+    break-inside: avoid;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.img{
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.btn{
+    float: right;
+    position: relative;
+    top: 80px;
+    right: -100px;
+    background: transparent;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 50px;
+    border: 2px solid red;
+    font-size: 20px;
+    color: red;
+    transition: .5s;
+}
+.para{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    bottom: 30px;
+    left: 500px;
+    transition: .5s;
+}
+.imgBox:hover .btn{
+    right: 60px;
+    cursor: pointer;
+}
+.imgBox:hover .para{
+    right: 0;
+    left: 0;
+}
+button{
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ................ */
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: whitesmoke;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+    height: 25vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+}
+@media screen and (max-width:720px) {
+    .navbar{
+        flex-direction: column;
+    }
+}
