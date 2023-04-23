@@ -21,7 +21,7 @@ function Gallery() {
     },[])
 
     const getData = async ()=>{
-        await axios.get("http://localhost:5000/")
+        await axios.get("https://imggallery.onrender.com")
         .then((res)=>{
             if(res.status === 200){
                 setData(res.data)
@@ -43,7 +43,7 @@ function Gallery() {
 
     const deleteImg = async()=>{
         console.log(id);
-        await axios.delete(`http://localhost:5000/delpost/${id}`)
+        await axios.delete(`https://imggallery.onrender.com/delpost/${id}`)
         .then((res)=>{
             if(res.data.status == "successfull"){
                 alert("Image deleted")
@@ -55,7 +55,7 @@ function Gallery() {
 
     const postImg = async()=>{
         if(updata.imageurl && updata.label){
-        await axios.post("http://localhost:5000/post",{
+        await axios.post("https://imggallery.onrender.com/post",{
                 label:updata.label,
                 imageurl:updata.imageurl
             }
@@ -75,7 +75,7 @@ function Gallery() {
     }
 
     const handleSearch = async ()=>{
-        await axios.get(`http://localhost:5000/search/${text}`)
+        await axios.get(`https://imggallery.onrender.com/search/${text}`)
         .then((res)=>{
             if(res.data.status == "successfull"){
                 setSrdata(res.data)
